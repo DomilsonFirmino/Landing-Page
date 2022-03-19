@@ -3,13 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --bg: hsl(215, 28%, 17%);
+    --l-bg:#4f555f;
+    --text-color: white;
+    --btn-color: rgb(23, 124, 240);
+    --b-radius: .4rem;
+}
 body{
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
 }
 header{
-    background-color: #1F2937;
+    background-color: var(--bg);
     padding: .8em 10em;
 }
 nav{
@@ -28,9 +37,121 @@ nav ul{
 }
 nav ul li a{
     text-decoration: none;
-    color:rgb(82, 188, 226);
+    color:var(--text-color);
     padding: .7em 1.2em;
     text-transform: uppercase;
     font-size: 1em;
     font-weight:800;
+}
+
+/*main*/
+main{
+    flex: 1;
+    
+}
+.hero{
+    display: flex;
+    padding: 4em 10em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg);
+}
+.content{
+    color: var(--text-color);
+}
+.content h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+.content p{
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.2em;
+    width: 400px;
+}
+.content span{
+    display: block;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--btn-color);
+    padding: .8em 1.8em;
+    border-radius: var(--b-radius);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.img{
+    align-self: stretch;
+    width: 500px;
+    margin-right: 1.2em;
+    background: var(--l-bg);
+}
+
+/*cards*/
+.cardsinfo{
+    text-align: center;
+    margin: 2rem 10rem;
+}
+.cardsinfo h2{
+    font-size: 2rem;
+    color: var(--bg);
+}
+.cards{
+    margin: 2rem 7.5rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.cards div{
+    width: 200px;
+    height: 200px;
+    flex-grow: 0;
+    background-color: var(--l-bg);
+    border-radius: var(--b-radius);
+}
+.quote{
+    background-color: var(--l-bg);
+    padding: 2rem 10rem;
+}
+.quote p{
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 2rem 7.5rem;
+}
+.quote p span{
+    display: block;
+    text-align: right;
+    font-weight: 800;
+}
+/*INfo*/
+.info{
+    margin: 4rem 10rem;
+    background-color: var(--btn-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 7.5rem;
+}
+.info h3{
+    font-size: 1.5rem;
+    margin-bottom: .8rem;
+    color: var(--text-color);
+}
+.btn-white{
+    border: 3px solid var(--text-color);
+}
+/*footer*/
+footer{
+    background-color: var(--bg);
+    text-align: center;
+}
+footer p{
+    color: var(--text-color);
+    padding: 2em 0;
 }
