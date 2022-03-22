@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 :root{
-    --bg: hsl(215, 28%, 17%);
-    --l-bg:#4f555f;
+    --bg: hsl(0, 0%, 0%);
+    --l-bg:#3c4553;
     --text-color: white;
     --btn-color: rgb(23, 124, 240);
     --b-radius: .4rem;
@@ -14,12 +14,14 @@ body{
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    display: flex;
-    flex-direction: column;
 }
 header{
     background-color: var(--bg);
     padding: .8em 10em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 nav{
     display: flex;
@@ -38,7 +40,7 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     color:var(--text-color);
-    padding: .7em 1.2em;
+    padding: .8em 1.2em;
     text-transform: uppercase;
     font-size: 1em;
     font-weight:800;
@@ -46,6 +48,7 @@ nav ul li a{
 
 /*main*/
 main{
+    margin-top: 5em;
     flex: 1;
     
 }
@@ -108,8 +111,8 @@ main{
     gap: 4rem;
 }
 .cards div{
-    width: 200px;
-    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
     flex-grow: 0;
     background-color: var(--l-bg);
     border-radius: var(--b-radius);
@@ -154,4 +157,9 @@ footer{
 footer p{
     color: var(--text-color);
     padding: 2em 0;
+}
+
+/*Effects*/
+nav ul li a:hover{
+    border-bottom: 2px solid var(--btn-color);
 }
